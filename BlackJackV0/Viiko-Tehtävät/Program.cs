@@ -12,6 +12,7 @@ namespace Viiko_Tehtävät
         {
             //Tehtava1();
             //Tehtava2();
+            Tehtava3();
         }
 
         static void Tehtava1()
@@ -76,6 +77,19 @@ namespace Viiko_Tehtävät
             {
                 retval = "5";
             }
+        }
+        static void Tehtava3()
+        {
+            /*
+             Tee ohjelma, joka kysyy käyttäjältä kolme lukua ja tulostaa niiden summan ja keskiarvon. 
+             */
+            Console.WriteLine("Syötä 3 lukua ja tulostan niiten summan ja keski arvon");
+            string num1 = Console.ReadLine();
+            string num2 = Console.ReadLine();
+            string num3 = Console.ReadLine();
+            string num4 = num1 + num2 + num3;
+            Console.WriteLine("summa: "+ num4);
+
         }
     }
 }
