@@ -11,7 +11,7 @@ namespace Viiko_Tehtävät
         static void Main(string[] args)
         {
             //Tehtava1();
-            Tehtava2();
+            //Tehtava2();
         }
 
         static void Tehtava1()
@@ -55,6 +55,26 @@ namespace Viiko_Tehtävät
             if (numper <= 1 && numper >= 0)
             {
                 retval = "0";
+            }
+            if (numper <= 2 && numper >= 3)
+            {
+                retval = "1";
+            }
+            if (numper <= 4 && numper >= 5)
+            {
+                retval = "2";
+            }
+            if (numper <= 6 && numper >= 7)
+            {
+                retval = "3";
+            }
+            if (numper <= 8 && numper >= 9)
+            {
+                retval = "4";
+            }
+            if (numper <= 10 && numper >= 12)
+            {
+                retval = "5";
             }
         }
     }
