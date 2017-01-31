@@ -31,6 +31,7 @@ namespace Demo
                     speed = value;
             }
         }
+        public string Brand { get; set; }
         //constructors
         public Car()
             //oletus konstruktori
@@ -52,7 +53,11 @@ namespace Demo
             else
                 speed = maxSpeed;
         }
-        
+        public override string ToString()
+        {
+            return Brand + " hv:" + Horsepower + " nopeus:" + speed;
+        }
+
     }
     class Program
     {
@@ -60,26 +65,30 @@ namespace Demo
         {
             //luodaan car-olio
             Car car = new Car();
+            car.Brand = "Toyota";
             car.Speed = 175;
             car.Horsepower = 120;
             //lisätään toinen prissi
             Car car2 = new Car();
+            car2.Brand = "Porsche";
             car2.Horsepower = 300;
             car2.Speed = 250;
             //luodaan kolma auto
             Car fiat = new Car(55, 105);
+            fiat.Brand = "Fiat";
             //näytetään kosolilla
-            Console.WriteLine("Autosi 1 nopeus on {0} ja hevosvaomat on {1}", car.Speed, car.Horsepower);
-            Console.WriteLine("Autosi 2 nopeus on {0} ja hevosvaomat on {1}", car2.Speed, car2.Horsepower);
-            Console.WriteLine("Autosi fiat nopeus on {0} ja hevosvaomat on {1}", fiat.Speed, fiat.Horsepower);
+            Console.WriteLine("Ensimmäinen auto {0}", car.ToString());
+            Console.WriteLine("Autosi {2} nopeus on {0} ja hevosvaomat on {1}", car.Speed, car.Horsepower, car.Brand);
+            Console.WriteLine("Autosi {2} nopeus on {0} ja hevosvaomat on {1}", car2.Speed, car2.Horsepower, car2.Brand);
+            Console.WriteLine("Autosi {2} nopeus on {0} ja hevosvaomat on {1}", fiat.Speed, fiat.Horsepower, fiat.Brand);
             //kiihtytetään autoa 20km/h
             car.Accelerate(20);
             car2.Accelerate(20);
             fiat.Accelerate(20);
             Console.WriteLine("Kiihtytetiin autoja 20km/h");
-            Console.WriteLine("Autosi 1 nopeus on {0} ja hevosvaomat on {1}", car.Speed, car.Horsepower);
-            Console.WriteLine("Autosi 2 nopeus on {0} ja hevosvaomat on {1}", car2.Speed, car2.Horsepower);
-            Console.WriteLine("Autosi fiat nopeus on {0} ja hevosvaomat on {1}", fiat.Speed, fiat.Horsepower);
+            Console.WriteLine("Autosi {2} nopeus on {0} ja hevosvaomat on {1}", car.Speed, car.Horsepower, car.Brand);
+            Console.WriteLine("Autosi {2} nopeus on {0} ja hevosvaomat on {1}", car2.Speed, car2.Horsepower, car2.Brand);
+            Console.WriteLine("Autosi {2} nopeus on {0} ja hevosvaomat on {1}", fiat.Speed, fiat.Horsepower, fiat.Brand);
         }
         static void Main(string[] args)
         {
